@@ -5,8 +5,12 @@
 #                ensure => present,
 #        }
 #}
+node node2.example.com{
+	class{'nfsshare':}
+	hiera_include('classes')
+}
 
-node default {
+node node1.example.com {
 
 class {'web':}	
 }	
